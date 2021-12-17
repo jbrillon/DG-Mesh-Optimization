@@ -13,7 +13,6 @@ void writeStringArrayToFile(int, std::string*, std::string, std::string, std::st
 void write2ArraysToFile(int, double*, double*, std::string, std::string, std::string);
 void writeArrayToFile(int, double*, std::string, std::string, std::string);
 void writeMatrixToFile(int, int, double**, std::string, std::string, std::string);
-void writeTransientSolutionToFile(int, int, double **, 
-	std::string, std::string, std::string, int, double);
+void writeTransientSolutionToFile(int, int, double **, std::string, std::string, std::string, int, double);
 
 #endif

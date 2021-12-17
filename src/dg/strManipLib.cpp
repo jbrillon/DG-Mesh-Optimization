@@ -1,5 +1,5 @@
 /* 
-	Library for standard string manipulation operations
+Library for standard string manipulation operations
 */
 
 #include <fstream> // for writing to files
@@ -13,7 +13,7 @@ using namespace std;
 //===============================================
 string delSpaces(string str) 
 {
-	str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
-	return str;
+    str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
+    return str;
 }
 //===============================================
