@@ -9,7 +9,7 @@
 #include "flattenLib.h"
 // my libraries
 #include "var.h"
-#include "semlib.h"
+#include "dglib.h"
 #include "PDE.h"
 
 using namespace polylib;

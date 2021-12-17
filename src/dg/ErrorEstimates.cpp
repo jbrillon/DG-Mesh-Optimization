@@ -12,7 +12,7 @@
 #include "flattenLib.h"
 // My SEM libraries
 #include "var.h"
-#include "semlib.h"
+#include "dglib.h"
 #include "ErrorEstimates.h"
 
 using namespace std;

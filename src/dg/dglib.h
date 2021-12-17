@@ -1,5 +1,5 @@
-#ifndef SEMLIB_H
-#define SEMLIB_H
+#ifndef DGLIB_H
+#define DGLIB_H
 
 #include <iostream>
 #include <stdlib.h>

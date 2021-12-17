@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include "semlib.h"
+#include "dglib.h"
 
 void displayMainParameters();
 void updateNumPoints_ProblemSizeParameters(int, int);

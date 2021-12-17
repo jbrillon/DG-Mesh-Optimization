@@ -1,3 +1,8 @@
+//==================================================
+//    Library of Discontinuous Galerkin Operations
+//    Written by Julien Brillon, McGill University
+//    - Uses polylib.h written by Spencer Sherwin
+//==================================================
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
@@ -7,7 +12,7 @@
 // my libraries
 #include "flattenLib.h"
 #include "var.h"
-#include "semlib.h"
+#include "dglib.h"
 
 using namespace polylib;
 using namespace std;
