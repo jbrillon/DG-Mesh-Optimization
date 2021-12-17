@@ -1,5 +1,7 @@
 **Date written: December 2020**
 
+This project was pursued as my final project for MECH 579 (Multidisciplinary Design Optimization) at McGill University, taught by Professor Nadarajah of the Mechanical Engineering department.
+
 # Discontinous Galerkin Mesh Optimization
 
 ## Introduction
@@ -8,9 +10,11 @@ In the field of computational fluid dynamics (CFD), The discontinuous Galerkin (
 
 ## Project Description
 
-In this project, the equation to be solved using DG is the **steady-state linear advection** equation, in which a manufactured high-gradient solution is chosen. An unconstrained optimization algorithm, the Quasi-Newton line-search algorithm, is employed to minimize the error of the DG solution, computing the gradient numerically using the finite-difference method, while the hessian is computed numerically using the Broyden–Fletcher–Goldfarb–Shanno (BFGS) method.
+In this project, the equation to be solved using DG is the **steady-state linear advection** equation, in which a manufactured high-gradient solution is chosen. An unconstrained optimization algorithm, the Quasi-Newton line-search algorithm, is employed to minimize the error of the DG solution, computing the gradient numerically using the finite-difference method, while the hessian is computed numerically using the Broyden–Fletcher–Goldfarb–Shanno (BFGS) method. For more details, refer to the report by clicking [here](https://drive.google.com/file/d/1GbJ9X1QdWYxXuT8GbWvLEF5mlCfxHY86/view?usp=sharing).
 
 ## DG Solver Spectral Convergence
+
+<!-- <img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/" width="45%"></img> -->
 
 ## Mesh Optimization
 

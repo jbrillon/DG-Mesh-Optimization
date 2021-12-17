@@ -1,3 +1,4 @@
+cd ./src/dg/
 # includes
 g++ -c polylib.c
 g++ -c allocatePointersLib.cpp
@@ -14,3 +15,7 @@ g++ -c initZeros.cpp
 # main
 g++ -c 1D_DG_solver_01.cpp
 g++ -o 1D_DG_solver_01.exe 1D_DG_solver_01.o initZeros.o readFilesDG.o PDE.o ErrorEstimates.o semlib.o allocateVar.o var.o strManipLib.o flattenLib.o writeToFile.o allocatePointersLib.o polylib.o -llapack -lblas -framework Accelerate
+# remove all .o files
+rm *.o
+# move .exe to root
+mv 1D_DG_solver_01.exe ../../
