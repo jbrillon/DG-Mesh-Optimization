@@ -14,7 +14,10 @@ In this project, the equation to be solved using DG is the **steady-state linear
 
 ## DG Solver Spectral Convergence
 
-<!-- <img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/" width="45%"></img> -->
+<img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/h_convergence/Figures/h_convergence_P_2.png" width="45%"></img>
+<img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/h_convergence/Figures/h_convergence_P_3.png" width="45%"></img>
+<img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/h_convergence/Figures/h_convergence_P_4.png" width="45%"></img>
+<img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/h_convergence/Figures/h_convergence_P_5.png" width="45%"></img>
 
 ## Mesh Optimization
 
