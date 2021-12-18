@@ -1,4 +1,4 @@
-SetupFile="../../SolverSetupFiles/MDO.setup"
+SetupFile="./h_convergence.setup"
 ParametersFile="../../parameters/arctangent.parameters"
 # get .exe after building code
 cp ../../1D_DG_solver_01.exe ./
