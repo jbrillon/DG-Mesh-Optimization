@@ -369,12 +369,6 @@ int main()
         assemGlobalMatrixLHS(LHS_MAT_global);
         assemGlobalVectorRHS(RHS_VEC_global);
 
-        writeMatrixToFile(Nel,Mdim,q_phi_innerproduct,"q_phi_innerproduct","txt","Data");
-        writeArrayToFile(GlobalDim,q_phi_innerproduct_global,"q_phi_innerproduct_global","txt","Data");
-
-        writeMatrixToFile(Mdim,Mdim,PHI_LL_MAT,"PHI_LL_MAT","txt","Data");
-        writeMatrixToFile(Mdim,Mdim,PHI_LR_MAT,"PHI_LR_MAT","txt","Data");
-        writeMatrixToFile(GlobalDim,GlobalDim,PHI_MAT_global,"PHI_MAT_global","txt","Data");
         double **C_1el = dmatrix(Mdim,Mdim);
         for(int i=0; i<Mdim; i++)
         {
@@ -383,41 +377,23 @@ int main()
                 C_1el[i][j] = C[i][j][0];
             }
         }
-        writeMatrixToFile(Mdim,Mdim,C_1el,"C_1el","txt","Data");
-        writeMatrixToFile(GlobalDim,GlobalDim,C_global,"C_global","txt","Data");
-        writeMatrixToFile(GlobalDim,GlobalDim,LHS_MAT_global,"LHS_MAT_global","txt","Data");
-        writeArrayToFile(GlobalDim,RHS_VEC_global,"RHS_VEC_global","txt","Data");
-        
-        // For testing LAPACK
-        // for(int i=0; i<GlobalDim; i++)
-        // {
-        //  for(int j=0; j<GlobalDim; j++)
-        //  {
-        //      if(i==j)
-        //      {
-        //          LHS_MAT_global[i][j] = 1.0;
-        //      }
-        //      else
-        //      {
-        //          LHS_MAT_global[i][j] = 0.0;
-        //      }
-        //  }
-        //  RHS_VEC_global[i] = double(2*i);
-        // }
+
+        /* Write to files for checking matrices and DG setup */
+        // writeMatrixToFile(Nel,Mdim,q_phi_innerproduct,"q_phi_innerproduct","txt","Data");
+        // writeArrayToFile(GlobalDim,q_phi_innerproduct_global,"q_phi_innerproduct_global","txt","Data");
+        // writeMatrixToFile(Mdim,Mdim,PHI_LL_MAT,"PHI_LL_MAT","txt","Data");
+        // writeMatrixToFile(Mdim,Mdim,PHI_LR_MAT,"PHI_LR_MAT","txt","Data");
+        // writeMatrixToFile(GlobalDim,GlobalDim,PHI_MAT_global,"PHI_MAT_global","txt","Data");
+        // writeMatrixToFile(Mdim,Mdim,C_1el,"C_1el","txt","Data");
+        // writeMatrixToFile(GlobalDim,GlobalDim,C_global,"C_global","txt","Data");
+        // writeMatrixToFile(GlobalDim,GlobalDim,LHS_MAT_global,"LHS_MAT_global","txt","Data");
+        // writeArrayToFile(GlobalDim,RHS_VEC_global,"RHS_VEC_global","txt","Data");
 
         /* Solve linear system to obtain the weights */
         /* - (1) Flatten matrix for LAPACK */
         flattenF(GlobalDim, GlobalDim, LHS_MAT_global, LHS_MAT_global_FLAT); // no issues here
         /* - (2) Solve for weights using LAPACK --> Stored in 6th argument */
         dgesv_(&GlobalDim, &NRHS, LHS_MAT_global_FLAT, &GlobalDim, ipiv_global, RHS_VEC_global, &GlobalDim, &INFO);
-        
-        // For testing LAPACK
-        // cout << "\n LAPACK SOLUTION:" << endl;
-        // for(int i=0; i<GlobalDim; i++)
-        // {
-        //  cout << "RHS_VEC_global[" << i << "]: " << RHS_VEC_global[i] << endl;
-        // }
-        // cout << endl;
 
         /* - (3) Store the solution (weights) for this element */
         for(int i=0; i<GlobalDim; i++)
@@ -426,8 +402,9 @@ int main()
         }
         /* Tranform global solution vector to elementise vector */
         GlobalToElementwise_Vector(P, Nel, map_frequency, u_hat_global, u_hat);
-        writeMatrixToFile(Nel,Mdim,u_hat,"u_hat","txt","Data");
-        writeArrayToFile(GlobalDim,u_hat_global,"u_hat_global","txt","Data");
+        /* Output u_hat */
+        // writeMatrixToFile(Nel,Mdim,u_hat,"u_hat","txt","Data");
+        // writeArrayToFile(GlobalDim,u_hat_global,"u_hat_global","txt","Data");
         /* Transfer to the phyiscal space + Compute exact solution */
         for(int eln=0; eln<Nel; eln++)
         {
