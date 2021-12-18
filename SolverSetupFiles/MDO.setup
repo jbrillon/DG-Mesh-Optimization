@@ -1,0 +1,31 @@
+SETUP FILE
+-----------------------------------------------
+- OPTIONS FOR "PDE TYPE":
+	- "LinearAdvection"
+	- "NonhomogenousInviscidBurgers"
+	- "HomogenousInviscidBurgers"
+	- "SteadyStateLinearAdvection_Manufactured"
+- OPTIONS FOR "CASE TYPE":
+	- "null" for all PDE TYPE
+	- "MDO" if vertice locations are to be input
+===============================================
+START
+POLYNOMIAL ORDER
+5
+NUMBER OF ELEMENTS
+42
+CFL
+0.5
+PDE TYPE
+SteadyStateLinearAdvection_Manufactured
+SUB-PROBLEM
+null
+INITIAL TIME
+0.0
+FINAL TIME
+1.0
+LEFT BOUNDARY X-VALUE
+0.0
+RIGHT BOUNDARY X-VALUE
+1.0
+END
