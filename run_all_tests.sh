@@ -8,3 +8,4 @@ python check_h_convergence.py
 # mesh optimization
 cd ./tests/mesh_optimization/
 ./run_mesh_optimization.sh
+python plotDGMDO.py
