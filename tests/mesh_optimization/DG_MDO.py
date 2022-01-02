@@ -99,7 +99,7 @@ def obj_func(xvert):
 #-----------------------------------------------------
 def gradient(xvert):
     global nVert
-    h = 1.0e-5 # perturbation size
+    h = 1.0e-3 #1.0e-5 # perturbation size
     gradient_val = np.zeros(nVert)
     # Numerical scheme: FD2
     # - Finite difference 2nd order
@@ -186,6 +186,9 @@ def QuasiNewtonMethod(X0,H):
 #=====================================================
 #                       MAIN
 #=====================================================
+# import sys
+# sys.path.append("../../parameters/")
+# sys.path.append("../../SolverSetupFiles/")
 #-----------------------------------------------------
 global Nel, xL, xR, nVert
 #-----------------------------------------------------
@@ -193,8 +196,8 @@ global L2error_file, vert_file, err_file, iter_file, data_dir
 mdo_data_dir = "./Data/MDO/" # root directory for MDO data
 #-----------------------------------------------------
 global SetupFile, ParametersFile, VerticesFile, VerticesFile_sh
-SetupFile="./SolverSetupFiles/MDO.setup"
-ParametersFile = "./parameters/arctangent.parameters"
+SetupFile="./mesh_optimization.setup"
+ParametersFile = "/Users/Julien/julien_phd/codes/DG_v1.3/parameters/arctangent.parameters"
 VerticesFile = "vertices.txt"
 VerticesFile_sh = "./" + VerticesFile
 #-----------------------------------------------------
@@ -288,7 +291,7 @@ subprocess.call(["mkdir",H_store_directory])
 #-----------------------------------------------------
 global sol_store, err_store, iter_store, numvars, maxIter, print_rate, tol
 numvars = 1*nVert
-tol = 1.0e-6
+tol = 7.0e-6
 maxIter = 100000
 print_rate = 1
 

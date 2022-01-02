@@ -1,13 +1,13 @@
 SETUP FILE
 -----------------------------------------------
 - OPTIONS FOR "PDE TYPE":
-	- "LinearAdvection"
-	- "NonhomogenousInviscidBurgers"
-	- "HomogenousInviscidBurgers"
-	- "SteadyStateLinearAdvection_Manufactured"
+    - "LinearAdvection"
+    - "NonhomogenousInviscidBurgers"
+    - "HomogenousInviscidBurgers"
+    - "SteadyStateLinearAdvection_Manufactured"
 - OPTIONS FOR "SUB-PROBLEM":
-	- "null" for all PDE TYPE
-	- "MDO" if vertice locations are to be input
+    - "null" for all PDE TYPE
+    - "MDO" if vertice locations are to be input
 ===============================================
 START
 CFL

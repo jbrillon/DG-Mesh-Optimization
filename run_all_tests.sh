@@ -4,4 +4,7 @@ cd ./tests/h_convergence/
 python check_h_convergence.py
 # # p-convergence
 # cd ./tests/p_convergence/
-# ./compile_p_conv.sh
+# ./run_p_convergence.sh
+# mesh optimization
+cd ./tests/mesh_optimization/
+./run_mesh_optimization.sh
