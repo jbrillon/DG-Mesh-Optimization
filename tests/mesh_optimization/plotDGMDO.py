@@ -18,7 +18,7 @@ for i in range(0,restart_level):
 	fig_directory += "restart/"
 # Create the directory if it doesn't already exist
 subprocess.call(["mkdir", fig_directory])
-figure_filetype = "pdf"
+figure_filetype = "png"
 clr = ['tab:blue','tab:green','tab:orange','tab:purple','tab:brown','tab:red']
 mrkr = ['o','s','^','d','v','>','<']
 # Font sizes
