@@ -35,7 +35,7 @@ In this project, the equation to be solved using DG is the **steady-state linear
 
 #### Optimized Mesh Vertices
 
-<img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/mesh_optimization/Figures/MDO/exact_sol_optimized_vertices.png" width="75%"></img>
+<img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/mesh_optimization/Figures/MDO/exact_sol_optimal_vertices.png" width="75%"></img>
 
 #### Remarks
 
