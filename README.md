@@ -37,7 +37,7 @@ In this project, the equation to be solved using DG is the **steady-state linear
 
 <img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/mesh_optimization/Figures/MDO/exact_sol_optimal_vertices.png" width="75%"></img>
 
-#### Remarks
+### Remarks
 
 From the results above we see that the initial L2-error has been successfully decreased by 2 orders of magnitude by optimizing the vertex locations. From the optimization path of vertices with the exact solution superimposed, we see that the vertices move towards the closest high-gradient region, as expected.
 
