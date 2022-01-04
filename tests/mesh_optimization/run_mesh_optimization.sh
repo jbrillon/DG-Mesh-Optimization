@@ -1,5 +1,5 @@
 # get .exe after building code
-cp ../../1D_DG_solver_01.exe ./
+cp ../../DG_solver.exe ./
 # initialize the vertex points
 python InitializeVertexPoints.py
 # optimize vertex points

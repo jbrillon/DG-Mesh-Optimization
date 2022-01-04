@@ -48,7 +48,7 @@ print('=====================================================')
 
 SetupFile = "./mesh_optimization.setup"
 ParametersFile = "../../parameters/arctangent.parameters"
-proc = subprocess.Popen("./1D_DG_solver_01.exe", stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+proc = subprocess.Popen("./DG_solver.exe", stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 proc.communicate("0\n0\n"+SetupFile+"\n"+"./vertices.txt\n"+ParametersFile+"\n")
 # proc.communicate("0\n0\n"+SetupFile+"\n"+ParametersFile+"\n")
 proc.wait()

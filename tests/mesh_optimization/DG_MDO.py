@@ -88,7 +88,7 @@ def obj_func(xvert):
     # Write the vertices to the file for C++ to read
     writeVerticesToFile(xvert,VerticesFile)
     # Run DG code with xvert as input
-    proc = subprocess.Popen("./1D_DG_solver_01.exe", stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("./DG_solver.exe", stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     proc.communicate("0\n0\n"+SetupFile+"\n"+VerticesFile_sh+"\n"+ParametersFile+"\n")
     # Get the output of the Python code
     L2error = np.loadtxt("./Data/L2error.txt")
