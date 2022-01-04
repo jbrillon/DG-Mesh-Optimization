@@ -23,7 +23,7 @@ In this project, the equation to be solved using DG is the **steady-state linear
 
 ### Convergence of Gradient and Minimization of L2-error
 
-<img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/mesh_optimization/Figures/MDO/convergence.png" width="45%"></img>
+<img src="https://raw.githubusercontent.com/jbrillon/DG-Mesh-Optimization/master/tests/mesh_optimization/Figures/MDO/convergence.png" width="60%"></img>
 
 ### Optimization Path of Mesh Vertices
 
